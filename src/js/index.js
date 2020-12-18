@@ -42,8 +42,6 @@ function render(variables = {}) {
     variables.instagram = "https://instagram.com/rolscarfullery";
   if (variables.avatarURL)
     variables.avatarURL = "https://i.imgur.com/6WavJXr.jpeg";
-  if (variables.socialMediaPosition == "position-left")
-    variables.socialMediaPosition = "position-right";
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
@@ -52,7 +50,7 @@ function render(variables = {}) {
      <h1>${variables.name} ${variables.lastname}</h1>
      <h2>${variables.role}</h2>
      <h3>${variables.city}, ${variables.country}</h3>
-     <ul class="position-right">
+     <ul class="${variables.socialMediaPosition}">
        <li><a href="${variables.twitter}" target="_blank"><i class="fa fa-twitter"></i></a></li>
        <li><a href="${variables.github}" target="_blank"><i class="fa fa-github"></i></a></li>
        <li><a href="${variables.linkedin}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
